@@ -1,0 +1,3 @@
+Flask
+gpt_2_simple
+tensorflow==1.15
