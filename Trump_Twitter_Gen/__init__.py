@@ -26,11 +26,6 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    # a simple page that says hello
-    @app.route('/about')
-    def about():
-        return render_template('tweet/about.html')
-
     @app.route('/')
     def tweet():
         text = db.get_db().execute("SELECT tweet FROM tweets ORDER BY RANDOM() LIMIT 1").fetchone()['tweet'][:280]
