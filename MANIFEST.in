@@ -1,0 +1,2 @@
+include Trump_Twitter_Gen
+global-exclude *.pyc

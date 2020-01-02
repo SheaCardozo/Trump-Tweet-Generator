@@ -1,8 +1,0 @@
-README.md
-setup.py
-Trump_Twitter_Gen.egg-info/PKG-INFO
-Trump_Twitter_Gen.egg-info/SOURCES.txt
-Trump_Twitter_Gen.egg-info/dependency_links.txt
-Trump_Twitter_Gen.egg-info/not-zip-safe
-Trump_Twitter_Gen.egg-info/requires.txt
-Trump_Twitter_Gen.egg-info/top_level.txt

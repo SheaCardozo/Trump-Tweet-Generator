@@ -37,15 +37,16 @@ def init_db():
     with current_app.open_resource("schema.sql") as f:
         db.executescript(f.read().decode("utf8"))
 
-    with open('Trump_Twitter_Gen//generated.txt', 'r', encoding='utf-8') as f:
+    with current_app.open_resource('generated.txt', 'r') as f:
+        f.reconfigure(encoding='utf-8')
         tweets = f.readlines()
 
     for tweet in tweets:
         db.execute(
             "INSERT INTO tweets (tweet) VALUES (?)", (tweet,)
         )
-    db.commit()
 
+    db.commit()
 
 
 @click.command("init-db")
