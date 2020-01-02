@@ -4,7 +4,42 @@
 {% endblock %}
 
 {% block content %}
-        <div id="output_container">
-              {{ tweet }}
-        </div>
+        <article id="output_container">
+            <img src="../../static/tweet_header.png" alt="header">
+            <div id="border_sep">
+                <div id="tweet_text">
+                    {{ tweet }}
+                </div>
+                <div id="tweet_data">
+                    <div id="date_time">
+                        {{ time }} · {{ date }}
+                    </div>
+                    <div id="data_sep">
+                        ·
+                    </div>
+                    <a id="sent_from">
+                        Twitter for iPhone
+                    </a>
+                </div>
+            </div>
+            <div id="like_rt_box_sep">
+                <div id="like_rt_box">
+                    <div class="like_rt_num">
+                        {{ rts }}&nbsp;
+                    </div>
+                    <div class="like_rt_text">
+                        Retweets
+                    </div>
+                    <div id="like_rt_sep">
+                    </div>
+                    <div class="like_rt_num">
+                        {{ likes }}&nbsp;
+                    </div>
+                    <div class="like_rt_text">
+                        Likes
+                    </div>
+                </div>
+            </div>
+            <img src="../../static/tweet_footer.png" alt="header">
+        </article>
 {% endblock %}

@@ -1,37 +1,104 @@
 html {
-  font-family: sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
   background: #eee;
   padding: 1rem;
 }
 
 body {
   max-width: 960px;
+  height: 500px;
   margin: 0 auto;
   background: white;
+  position:relative
 }
 
 #output_container {
-    padding: 1rem;
-    text-align: center;
+    box-sizing: border-box;
+    border: 1px #E1E8ED;
+    border-style: solid;
+    width: 600px;
+    margin: auto;
     line-height: 1.3125;
+    font-weight: 400;
+}
+
+#tweet_text {
     font-size: 23px;
-    font-size: 400;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+}
+
+#tweet_data {
+    display: flex;
+    padding: 15px 0px 15px 0px
+}
+
+#date_time {
+    font-size: 15px;
+    color: rgb(101, 119, 134);
+}
+
+#data_sep {
+    padding: 0px 5px 0px 5px;
+    font-size: 15px;
+    color: rgb(101, 119, 134);
+}
+
+#border_sep {
+    padding: 0px 15px 0px 15px;
+}
+
+#sent_from {
+    font-size: 15px;
+}
+
+#like_rt_box_sep {
+    padding: 0px 15px 0px 15px;
+}
+
+#like_rt_sep {
+    margin-left: 20px;
+}
+
+#like_rt_box {
+    padding: 15px 0px 15px 0px;
+    border-top: 1px #E1E8ED;
+    border-bottom: 1px #E1E8ED;
+    border-left: 0px #E1E8ED;
+    border-right: 0px #E1E8ED;
+    border-style: solid;
+    display: flex;
+}
+
+.like_rt_num {
+    font-weight: 700;
+}
+
+.like_rt_text {
+    color: rgb(101, 119, 134);
 }
 
 footer {
     text-align: center;
     font-size: 1em;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-family: serif;
+  color: white;
   margin: 1rem 0;
 }
 
 a {
-  color: #377ba8;
+    color: rgb(27, 149, 224);
+
+}
+
+#reload {
+  color: white;
 }
 
 hr {
@@ -40,7 +107,7 @@ hr {
 }
 
 nav {
-  background: lightgray;
+  background: #1DA1F2;
   display: flex;
   align-items: center;
   padding: 0 0.5rem;
@@ -69,5 +136,7 @@ nav ul li a, nav ul li span, header .action {
 }
 
 .content {
-  padding: 0 1rem 1rem;
+  padding: 1rem;
+  align-items: center;
+  display: flex
 }

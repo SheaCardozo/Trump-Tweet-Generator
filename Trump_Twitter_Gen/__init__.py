@@ -1,8 +1,8 @@
 import os
 
 from flask import Flask, render_template
-from random import randint
 from Trump_Twitter_Gen import db
+from .utils import generate_likes_rts, get_time_date
 
 
 def create_app(test_config=None):
@@ -29,7 +29,9 @@ def create_app(test_config=None):
     @app.route('/')
     def tweet():
         text = db.get_db().execute("SELECT tweet FROM tweets ORDER BY RANDOM() LIMIT 1").fetchone()['tweet'][:280]
-        return render_template('tweet/index.html', tweet=text)
+        time, date = get_time_date()
+        likes, rts = generate_likes_rts()
+        return render_template('tweet/index.html', tweet=text, time=time, date=date, likes=likes, rts=rts)
 
     db.init_app(app)
 

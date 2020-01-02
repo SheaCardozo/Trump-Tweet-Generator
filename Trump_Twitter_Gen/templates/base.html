@@ -1,18 +1,18 @@
 <!doctype html>
-<title>Trump Tweet Gen</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<nav>
-  <h1>Trump Tweet Generator</h1>
-  <ul>
-      <li><a href="{{ url_for('tweet') }}">Tweet!</a>
-  </ul>
-</nav>
-<section class="content">
-  <header>
-    {% block header %}{% endblock %}
-  </header>
-  {% block content %}{% endblock %}
-</section>
-<footer>
-    Developed by Shea Cardozo, 2019
-</footer>
+<body>
+  <title>Trump Tweet Gen</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <nav>
+    <h1>Trump Tweet Generator</h1>
+    <ul>
+        <li><a id="reload" href="{{ url_for('tweet') }}">Tweet!</a>
+    </ul>
+  </nav>
+  <section class="content">
+    <header>
+      {% block header %}{% endblock %}
+    </header>
+    {% block content %}{% endblock %}
+  </section>
+  <footer><div>Developed by Shea Cardozo, 2019</div></footer>
+</body>
