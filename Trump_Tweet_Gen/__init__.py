@@ -1,7 +1,7 @@
 import os
 
 from flask import Flask, render_template
-from Trump_Twitter_Gen import db
+from Trump_Tweet_Gen import db
 from .utils import generate_likes_rts, get_time_date
 
 
