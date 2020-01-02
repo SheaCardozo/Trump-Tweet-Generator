@@ -1,2 +1,4 @@
-graft Trump_Twitter_Gen
-global-exclude *.pyc
+graft Trump_Tweet_Gen/templates
+graft Trump_Tweet_Gen/static
+include Trump_Tweet_Gen/*.txt
+include Trump_Tweet_Gen/*.sql
